@@ -1,9 +1,11 @@
 -- import database
-use db_theater1;
+use db_theatre;
 
 set foreign_key_checks=0;
 
 create table halls (hall_id int, class varchar(10), no_of_seats int, primary key(hall_id,class));
+
+create table manager_info (manager_id int primary key, manager_name varchar(40), age int);
 
 create table movies (movie_id int primary key, movie_name varchar(40), length int, language varchar(10), show_start date, show_end date);
 
